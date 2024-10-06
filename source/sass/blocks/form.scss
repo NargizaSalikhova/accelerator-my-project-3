@@ -1,0 +1,164 @@
+.form__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &--select {
+    width: 260px;
+  }
+}
+
+.form__label {
+  font-size: 12px;
+  line-height: 14px;
+  color: $secondary-color;
+  opacity: 0.8;
+
+  padding: 0;
+  margin: 0;
+}
+
+.form__input {
+  color: $white;
+  padding: 0 25px;
+  border: 1px solid $white-opacity-30;
+  border-radius: 8px;
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+
+  outline: none;
+  appearance: none;
+
+  &:hover {
+    border-color: $white;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $white;
+  }
+
+  &:disabled {
+    background-color: $white-opacity;
+    opacity: 0.4;
+  }
+
+  &--error {
+    border-color: $red;
+    background-color: $red-opacity-20;
+  }
+}
+
+.form__item--name .form__input,
+.form__item--phone .form__input {
+  min-height: 50px;
+}
+
+.form__item--feedback .form__input {
+  min-height: 94px;
+  padding: 10px 25px;
+  resize: none;
+}
+
+.form__button {
+  width: 260px;
+}
+
+.form--modal .form__list {
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.form--modal .form__item {
+  gap: 8px;
+}
+
+.form--modal .form__label {
+  font-size: 14px;
+  color: $primary-color;
+}
+
+.form--modal .form__input {
+  color: $primary-color;
+  border-color: $primary-color-opacity;
+  min-height: 44px;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $primary-color;
+  }
+
+  &:disabled {
+    border-color: $grey-opacity-50;
+    background-color: $grey-opacity-20;
+  }
+
+  &--error {
+    border-color: $red;
+    background-color: $red-opacity-20;
+  }
+}
+
+.form--modal .form__button {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: $tablet-width) {
+  .form__list {
+    margin-bottom: 40px;
+  }
+
+  .form__list--modal {
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+
+  .form__item--select {
+    width: 100%;
+  }
+
+  .form--modal .form__item {
+    gap: 12px;
+  }
+
+  .form__label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .form__item--feedback .form__input {
+    min-height: 88px;
+  }
+
+  .form__button {
+    width: 352px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__label {
+    line-height: 18px;
+  }
+
+  .form__item--feedback .form__input {
+    min-height: 90px;
+  }
+}

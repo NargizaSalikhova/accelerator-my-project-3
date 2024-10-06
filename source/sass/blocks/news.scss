@@ -1,0 +1,153 @@
+.news {
+  background-color: $secondary-color;
+  padding: 50px 15px;
+}
+
+.news__container.swiper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.news__header {
+  text-align: center;
+}
+
+.news__tabs-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  overflow: overlay;
+  margin-right: -15px;
+}
+
+.news__tab-title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0.24px;
+  text-align: center;
+  color: $bg-blue;
+  opacity: 0.6;
+  text-transform: uppercase;
+
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 11px 16px;
+
+  cursor: pointer;
+}
+
+.news__tab-title.active {
+  opacity: 1;
+  border-color: $bg-blue;
+}
+
+.news__tab-content--hidden {
+  display: none;
+}
+
+.news__swiper-buttons {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news__pagination {
+  display: flex;
+  gap: 16px;
+}
+
+.news__pagination .swiper-pagination-bullet {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: $bg-blue;
+
+  width: 26px;
+  height: 26px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 6px 0;
+  display: block;
+
+  cursor: pointer;
+
+  // &:hover {
+  //   background-color: $grey;
+  // }
+
+  // &:active {
+  //   background-color: $white-opacity;
+  // }
+}
+
+.news__pagination .swiper-pagination-bullet-active {
+  color: $white;
+  background-color: $bg-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .news {
+    padding: 50px 45px;
+  }
+
+  .news__container.swiper {
+    gap: 30px;
+  }
+
+  .news__tabs-list {
+    gap: 10px;
+    margin-right: -45px;
+    margin-left: 2px;
+  }
+
+  .news__tab-title {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+
+    padding: 16px 20px 13px;
+  }
+
+  .news__pagination {
+    gap: 20px;
+  }
+
+  .news__pagination .swiper-pagination-bullet {
+    font-size: 16px;
+    line-height: 20px;
+
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .news {
+    padding: 61px 0 60px;
+  }
+
+  .news__container.swiper {
+    gap: 40px;
+    align-items: center;
+    width: 1240px;
+    margin: 0 auto;
+  }
+
+  .news__tabs-list {
+    gap: 30px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .news__tab-title {
+    padding: 14px 0;
+    width: 120px;
+  }
+
+  .news__swiper-buttons {
+    width: 1240px;
+  }
+}

@@ -1,0 +1,22 @@
+// link {
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   background-color: $bg-blue;
+//   border-radius: 50%;
+//   position: relative;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     right: 10px;
+//     width: 10px;
+//     height: 10px;
+//     mask-image: url("/__spritemap#sprite-arrow-small-view");
+//     mask-repeat: no-repeat;
+//     background-color: $white;
+//     z-index: 2;
+//   }
+// }

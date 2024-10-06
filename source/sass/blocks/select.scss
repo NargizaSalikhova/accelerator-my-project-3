@@ -1,0 +1,151 @@
+.select {
+  position: relative;
+}
+
+.select__button {
+  font-size: 14px;
+  line-height: 14px;
+  color: $white;
+  text-align: left;
+
+  border: 1px solid $white-opacity-30;
+  border-radius: 8px;
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+
+  outline: none;
+  appearance: none;
+
+  height: 52px;
+  padding: 17px 35px 17px 20px;
+  width: 100%;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    mask-image: url("/__spritemap#sprite-arrow-down-view");
+    mask-repeat: no-repeat;
+    background-color: $white;
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-color: $white;
+  }
+
+  &:active,
+  &:focus,
+  &--active {
+    border-color: $white;
+  }
+
+  &--error {
+    border-color: $red;
+    background-color: $red-opacity-20;
+  }
+}
+
+.select__button--open {
+  &::before {
+    transform: rotate(180deg);
+    transition: 0.5s ease-out;
+    top: 35%;
+  }
+}
+
+.select__list {
+  display: none;
+
+  margin: 0;
+  list-style: none;
+
+  padding: 1px;
+  background-color: $white;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+
+  position: absolute;
+  left: 0;
+  top: 56px;
+  z-index: 3;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.select__item {
+  font-size: 14px;
+  line-height: 14px;
+  color: $primary-color;
+
+  padding: 17px 20px;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    color: $bg-blue;
+  }
+
+  &:active,
+  &:focus {
+    color: $white;
+    background-color: $bg-blue;
+  }
+}
+
+.select__input-hidden {
+  display: none;
+}
+
+.select--modal .select__button {
+  color: $primary-color;
+
+  height: 44px;
+  border-color: $primary-color-opacity;
+
+  &::before {
+    background-color: $primary-color;
+  }
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $primary-color;
+  }
+
+  &:disabled {
+    border-color: $grey-opacity-50;
+    background-color: $grey-opacity-20;
+  }
+
+  &--error {
+    border-color: $red;
+    background-color: $red-opacity-20;
+  }
+}
+
+.select--modal .select__list {
+  border-color: $primary-color;
+}
+
+@media (min-width: $tablet-width) {
+  .select__button {
+    &::before {
+      right: 20px;
+    }
+  }
+}

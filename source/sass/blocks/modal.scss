@@ -1,0 +1,95 @@
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: $blue-overlay;
+  z-index: 9;
+}
+
+.modal__body {
+  width: 290px;
+  background-color: $white;
+  top: 23px;
+  left: 15px;
+  padding: 40px 15px;
+  border-radius: 16px;
+
+  position: relative;
+  z-index: 10;
+}
+
+.modal__header {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $bg-blue;
+  text-align: center;
+}
+
+.modal__text {
+  color: $primary-color;
+  text-align: center;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.modal__close {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 20px;
+  right: 20px;
+  mask-image: url("/__spritemap#sprite-cross-view");
+  mask-repeat: no-repeat;
+  background-color: $bg-blue;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .modal__body {
+    width: 510px;
+    top: 204px;
+    left: 129px;
+    padding: 60px 80px;
+  }
+
+  .modal__header {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .modal__text {
+    margin-bottom: 30px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .modal__close {
+    width: 22px;
+    height: 22px;
+    top: 30px;
+    right: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal__body {
+    top: 90px;
+    left: 465px;
+  }
+
+  .modal__header {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}

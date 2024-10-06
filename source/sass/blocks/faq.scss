@@ -1,0 +1,255 @@
+.faq {
+  background-color: $secondary-color;
+}
+
+.faq__container {
+  padding: 50px 15px;
+}
+
+.faq__header {
+  text-align: center;
+
+  margin-bottom: 30px;
+  padding: 0 60px 0 59px;
+}
+
+.faq__tab-content {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq__tab-item {
+  border: 2px solid $bg-blue;
+  border-radius: 14px;
+  padding: 20.9px 16px 20px 15px;
+}
+
+.faq__button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: inherit;
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.faq__toggle {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: $bg-blue;
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 9px;
+    width: 20px;
+    height: 20px;
+    mask-image: url("/__spritemap#sprite-plus-view");
+    mask-repeat: no-repeat;
+    background-color: $white;
+    transition: all 0.3s;
+  }
+}
+
+.faq__tab-title {
+  padding: 0;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $bg-blue;
+  text-align: left;
+
+  br {
+    display: none;
+  }
+}
+
+.faq__tab-item:has(.faq__button:hover),
+.faq__tab-item:has(.faq__button:focus) {
+  background-color: $white;
+
+  .faq__toggle {
+    background-color: transparent;
+    border-color: $bg-blue;
+  }
+
+  .faq__toggle::after {
+    background-color: $bg-blue;
+  }
+}
+
+.faq__tab-item:has(.faq__button:active) {
+  background-color: $white;
+
+  .faq__tab-title {
+    color: $dark-blue;
+  }
+
+  .faq__toggle {
+    background-color: $dark-blue;
+  }
+}
+
+.faq__tab-item:has(.faq__button:disabled) {
+  .faq__toggle {
+    background-color: $grey;
+  }
+}
+
+.faq__tab-item p {
+  padding: 0;
+  margin: 0;
+
+  color: $secondary-color;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.5s ease-out, margin-top 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out;
+}
+
+.faq__tab-item.active {
+  background-color: $bg-blue;
+
+  p {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 19.5px;
+    transition: max-height 0.5s ease-out, margin-top 0.5s ease-out, opacity 0.8s ease-out, visibility 0.8s ease-out;
+  }
+}
+
+.faq__button.active .faq__toggle {
+  background-color: $white;
+  transition: all 0.2s;
+}
+
+.faq__button.active .faq__toggle::after {
+  mask-image: url("/__spritemap#sprite-minus-view");
+  background-color: $bg-blue;
+}
+
+
+.faq__tab-item:has(.faq__button.active:hover),
+.faq__tab-item:has(.faq__button.active:focus) {
+  background-color: $bg-blue;
+
+  .faq__toggle {
+    background-color: transparent;
+    border-color: $white;
+  }
+
+  .faq__toggle::after {
+    background-color: $white;
+  }
+}
+
+.faq__tab-item:has(.faq__button.active:active) {
+  background-color: $dark-blue;
+
+  .faq__tab-title {
+    color: $white;
+  }
+
+  .faq__toggle {
+    background-color: $white;
+  }
+
+  .faq__toggle::after {
+    background-color: $dark-blue;
+  }
+}
+
+.faq__button.active .faq__tab-title {
+  color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .faq__container {
+    padding: 50px 45px;
+  }
+
+  .faq__header {
+    margin-bottom: 40px;
+    padding: 0;
+  }
+
+  .faq__tab-item {
+    border-radius: 16px;
+    padding: 30px 30px 30.8px;
+  }
+
+  .faq__button {
+    gap: 10px;
+  }
+
+  .faq__tab-title {
+    font-size: 22px;
+    line-height: 26px;
+
+    br {
+      display: block;
+    }
+  }
+
+  .faq__toggle {
+    align-self: flex-start;
+  }
+
+  .faq__tab-item.active p {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .faq__container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 60px 206px;
+  }
+
+  .faq__header {
+    margin-bottom: 60px;
+    padding: 11px 9px;
+  }
+
+  .faq__tab-item {
+    padding: 41px 40px 40px;
+  }
+
+  .faq__button {
+    align-items: center;
+  }
+
+  .faq__tab-title {
+    font-size: 28px;
+    line-height: 34px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .faq__tab-content {
+    // gap: 10.2px;
+  }
+}

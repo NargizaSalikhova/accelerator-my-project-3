@@ -1,0 +1,62 @@
+.swiper-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: right;
+}
+
+.swiper-buttons__prev,
+.swiper-buttons__next {
+  width: 22px;
+  height: 22px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 7px;
+    left: 0;
+    mask-image: url("/__spritemap#sprite-arrow-small-view");
+    mask-repeat: no-repeat;
+    mask-size: 10px 10px;
+    background-color: $bg-blue;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    &::before {
+      background-color: $blue-opacity-70;
+    }
+  }
+
+  &:focus {
+    background-color: $white;
+  }
+
+  &:active {
+    background-color: $white;
+
+    &::before {
+      background-color: $blue-opacity-70;
+    }
+  }
+
+  &:disabled {
+    &::before {
+      background-color: $grey;
+    }
+  }
+}
+
+.swiper-buttons__prev {
+  &::before {
+    top: -7px;
+    transform: rotate(225deg);
+  }
+}
