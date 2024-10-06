@@ -1,0 +1,11 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 102px;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.main-header__logo {
+  margin: 1px 0;
+}

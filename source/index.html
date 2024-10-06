@@ -21,31 +21,29 @@
         <div class="hero__container">
           <header class="hero__header main-header">
             <img class="main-header__logo logo" src="img/logo.svg" width="52" height="52" alt="Логотип проекта Стажировка.">
-            <nav class="main-header__nav nav nav--closed">
-              <button class="nav__toggle" type="button" aria-label="Открыть меню">
-                <span class="nav__toggle-name">меню</span>
-                <svg aria-hidden="true" focusable="false">
-                  <use href="/__spritemap#sprite-menu"></use>
-                </svg>
-
+            <nav class="main-header__nav nav">
+              <button class="nav__button" type="button">
+                <span class="nav__button-name">меню</span>
+                <span class="nav__toggle"></span>
               </button>
+
               <ul class="nav__list site-list">
                 <li class="site-list__item">
                   <a href="#about">О проекте</a>
                 </li>
-                <li class="site-list__item site-list__item--tab">
-                  <a href="#tab-content-1">Программы</a>
-                  <ul class="site-list__tab-content" id="tab-content-1">
-                    <li class="site-list__tab-item">
+                <li class="site-list__item subgroup" data-tab="subgroup-content-1">
+                  <p class="subgroup__title">Программы</p>
+                  <ul class="subgroup__content-list" id="subgroup-content-1">
+                    <li class="subgroup__content-item">
                       <a href="#">Стажировки</a>
                     </li>
-                    <li class="site-list__tab-item">
+                    <li class="subgroup__content-item">
                       <a href="#">Волонтёрство</a>
                     </li>
-                    <li class="site-list__tab-item">
+                    <li class="subgroup__content-item">
                       <a href="#">Учеба</a>
                     </li>
-                    <li class="site-list__tab-item">
+                    <li class="subgroup__content-item">
                       <a href="#">Религия</a>
                     </li>
                   </ul>
@@ -56,20 +54,23 @@
                 <li class="site-list__item">
                   <a href="#reviews">отзывы</a>
                 </li>
-                <li class="site-list__item">
-                  <a href="#tab-content-2">новости</a>
-                  <ul class="site-list__tab-content" id="tab-content-2">
-                    <li class="site-list__tab-item">
-                      <a href="#"></a>
+                <li class="site-list__item subgroup" data-tab="subgroup-content-2">
+                  <p class="subgroup__title">новости</p>
+                  <ul class="subgroup__content-list" id="subgroup-content-2">
+                    <li class="subgroup__content-item">
+                      <a href="#">общее</a>
                     </li>
-                    <li class="site-list__tab-item">
-                      <a href="#"></a>
+                    <li class="subgroup__content-item">
+                      <a href="#">Волонтёрство</a>
                     </li>
-                    <li class="site-list__tab-item">
-                      <a href="#"></a>
+                    <li class="subgroup__content-item">
+                      <a href="#">Стажировки</a>
                     </li>
-                    <li class="site-list__tab-item">
-                      <a href="#"></a>
+                    <li class="subgroup__content-item">
+                      <a href="#">Карьера</a>
+                    </li>
+                    <li class="subgroup__content-item">
+                      <a href="#">путешествия</a>
                     </li>
                   </ul>
                 </li>
@@ -86,63 +87,65 @@
             <div class="hero__pagination swiper-pagination"></div>
 
             <ul class="hero__list swiper-wrapper">
-              <li class="hero__item hero__item--caucasus swiper-slide">
+              <li class="hero__item swiper-slide">
                 <picture>
-                  <!-- <source media="(min-width:1440px)" width="1440" height="800" type="image/webp" srcset="img/hero/hero-1-desktop.webp 1x, img/hero/hero-1-desktop@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="768" height="1034" type="image/webp" srcset="img/hero/hero-1-tablet.webp 1x, img/hero/hero-1-tablet@2x.webp 2x">
-                  <source width="320" height="568" type="image/webp" srcset="img/hero/hero-1-mobile.webp 1x, img/hero/hero-1-mobile@2x.webp 2x">
-                  <source media="(min-width:1440px)" width="1440" height="800" type="image/jpg" srcset="img/hero/hero-1-desktop.jpg 1x, img/hero/hero-1-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="768" height="1034" type="image/jpg" srcset="img/hero/hero-1-tablet.jpg 1x, img/hero/hero-1-tablet@2x.jpg 2x">
-                  <img src="img/hero/hero-1-mobile.jpg" srcset="img/hero/hero-1-mobile@2x.jpg 2x" width="320" height="568" alt="Вершины Кавказа."> -->
+                  <source media="(min-width:1440px)" width="1440" height="800" type="image/webp" srcset="img/hero/hero-desk-1.webp 1x, img/hero/hero-desk-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp" srcset="img/hero/hero-tab-1.webp 1x, img/hero/hero-tab-1@2x.webp 2x">
+                  <source width="320" height="568" type="image/webp" srcset="img/hero/hero-mob-1.webp 1x, img/hero/hero-mob-1@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="1440" height="800" type="image/jpg" srcset="img/hero/hero-desk-1.jpg 1x, img/hero/hero-desk-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpg" srcset="img/hero/hero-tab-1.jpg 1x, img/hero/hero-tab-1@2x.jpg 2x">
+                  <img src="img/hero/hero-mob-1.jpg" srcset="img/hero/hero-mob-1@2x.jpg 2x" width="320" height="568" alt="Студентка.">
                 </picture>
-                <div class="hero__text-wrap">
-                  <div class="hero__text">
-                    <h3 class="hero__title">Глобальный
-                      профессиональный
-                      опыт обучения
-                      за рубежом</h3>
-                    <p>Погрузитесь в академическую
-                      программу, проходя практику
-                      в разных городах, ощущая
-                      настоящий студенческий стиль жизни!</p>
-                    <a class="hero__link link" href="#">подробнее</a>
+                <div class="hero-content">
+                  <h3 class="hero-content__title">Глобальный профессиональный <br>опыт обучения за&nbsp;рубежом</h3>
+                  <div class="hero-content__wrap">
+                    <p>Погрузитесь в академическую программу, проходя практику в&nbsp;разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                    <div class="hero-content__link-wrap">
+                      <a class="link-btn" href="#">подробнее</a>
+                    </div>
                   </div>
                 </div>
               </li>
 
-              <li class="hero__item hero__item--kamchatka swiper-slide">
+              <li class="hero__item swiper-slide">
                 <picture>
-                  <!-- <source media="(min-width:1440px)" width="1440" height="800" type="image/webp" srcset="img/hero/hero-2-desktop.webp 1x, img/hero/hero-2-desktop@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="768" height="1034" type="image/webp" srcset="img/hero/hero-2-tablet.webp 1x, img/hero/hero-2-tablet@2x.webp 2x">
-                  <source width="320" height="568" type="image/webp" srcset="img/hero/hero-2-mobile.webp 1x, img/hero/hero-2-mobile@2x.webp 2x">
-                  <source media="(min-width:1440px)" width="1440" height="800" type="image/jpg" srcset="img/hero/hero-2-desktop.jpg 1x, img/hero/hero-2-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="768" height="1034" type="image/jpg" srcset="img/hero/hero-2-tablet.jpg 1x, img/hero/hero-2-tablet@2x.jpg 2x">
-                  <img src="img/hero/hero-2-mobile.jpg" srcset="img/hero/hero-2-mobile@2x.jpg 2x" width="320" height="568" alt="Горы Камчатки."> -->
+                  <source media="(min-width:1440px)" width="1440" height="800" type="image/webp" srcset="img/hero/hero-desk-2.webp 1x, img/hero/hero-desk-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp" srcset="img/hero/hero-tab-2.webp 1x, img/hero/hero-tab-2@2x.webp 2x">
+                  <source width="320" height="568" type="image/webp" srcset="img/hero/hero-mob-2.webp 1x, img/hero/hero-mob-2@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="1440" height="800" type="image/jpg" srcset="img/hero/hero-desk-2.jpg 1x, img/hero/hero-desk-2@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpg" srcset="img/hero/hero-tab-2.jpg 1x, img/hero/hero-tab-2@2x.jpg 2x">
+                  <img src="img/hero/hero-mob-2.jpg" srcset="img/hero/hero-mob-2@2x.jpg 2x" width="320" height="568" alt="Волонтёры.">
                 </picture>
-                <div class="hero__text-wrap">
-                  <div class="hero__text">
-                    <h3 class="hero__title">Волонтёрские программы — внесите свой вклад в общество</h3>
+                <div class="hero-content">
+                  <h3 class="hero-content__title">Волонтёрские программы — внесите свой вклад в общество</h3>
+                  <div class="hero-content__wrap">
                     <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-                    <a class="hero__link link" href="#">подробнее</a>
+                    <div class="hero-content__link-wrap">
+                      <a class="link-btn" href="#">подробнее</a>
+                    </div>
                   </div>
+                </div>
               </li>
 
-              <li class="hero__item hero__item--altai swiper-slide">
+              <li class="hero__item swiper-slide">
                 <picture>
-                  <!-- <source media="(min-width:1440px)" width="1440" height="800" type="image/webp" srcset="img/hero/hero-3-desktop.webp 1x, img/hero/hero-3-desktop@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="768" height="1034" type="image/webp" srcset="img/hero/hero-3-tablet.webp 1x, img/hero/hero-3-tablet@2x.webp 2x">
-                  <source width="320" height="568" type="image/webp" srcset="img/hero/hero-3-mobile.webp 1x, img/hero/hero-3-mobile@2x.webp 2x">
-                  <source media="(min-width:1440px)" width="1440" height="800" type="image/jpg" srcset="img/hero/hero-3-desktop.jpg 1x, img/hero/hero-3-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="768" height="1034" type="image/jpg" srcset="img/hero/hero-3-tablet.jpg 1x, img/hero/hero-3-tablet@2x.jpg 2x">
-                  <img src="img/hero/hero-3-mobile.jpg" srcset="img/hero/hero-3-mobile@2x.jpg 2x" width="320" height="568" alt="Алтайские горы."> -->
+                  <source media="(min-width:1440px)" width="1440" height="800" type="image/webp" srcset="img/hero/hero-desk-3.webp 1x, img/hero/hero-desk-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp" srcset="img/hero/hero-tab-3.webp 1x, img/hero/hero-tab-3@2x.webp 2x">
+                  <source width="320" height="568" type="image/webp" srcset="img/hero/hero-mob-3.webp 1x, img/hero/hero-mob-3@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="1440" height="800" type="image/jpg" srcset="img/hero/hero-desk-3.jpg 1x, img/hero/hero-desk-3@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpg" srcset="img/hero/hero-tab-3.jpg 1x, img/hero/hero-tab-3@2x.jpg 2x">
+                  <img src="img/hero/hero-mob-3.jpg" srcset="img/hero/hero-mob-3@2x.jpg 2x" width="320" height="568" alt="Рабочий процесс наших клиентов.">
                 </picture>
-                <div class="hero__text-wrap">
-                  <div class="hero__text">
-                    <h3 class="hero__title">Программы стажировок
-                      в крупнейших компаниях мира</h3>
-                    <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-                    <a class="hero__link link" href="#">подробнее</a>
+                <div class="hero-content">
+                  <h3 class="hero-content__title">Программы стажировок
+                    в крупнейших компаниях мира</h3>
+                  <div class="hero-content__wrap">
+                    <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                    <div class="hero-content__link-wrap">
+                      <a class="link-btn" href="#">подробнее</a>
+                    </div>
                   </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -152,44 +155,105 @@
       <!-- Блок О проекте -->
       <section class="about" id="about" data-test="about">
         <div class="about__container">
-          <h2 class="about__header title">О проекте «Стажировка»</h2>
-          <p>«Стажировка» — совместный проект
-            правительств и волонтёрских бригад.</p>
-          <div class="about__info">
-            <h3>Наша цель</h3>
-            <p>Наша деятельность направлена
-              на повышение квалификации молодых
-              специалистов на ранних и средних
-              стадиях карьеры, предоставляя
-              им инструменты для решения сложных
-              проблем, с которыми сталкиваются в мире.
-              Цель центра — наделить этих людей
-              способностью инициировать значимые
-              изменения.</p>
+          <div class="about__title">
+            <h2 class="about__header title">О проекте «Стажировка»</h2>
+            <p>«Стажировка» — совместный проект правительств и волонтёрских бригад.</p>
           </div>
-          <a class="about__link link" href="#">подробнее о проекте</a>
+
+          <div class="about__info">
+            <div class="about__info-text">
+              <h3>Наша цель</h3>
+              <p>Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на ранних и средних стадиях карьеры,
+                предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются в мире.
+                Цель центра — наделить этих людей способностью инициировать значимые изменения.</p>
+            </div>
+
+            <button class="about__button link-btn" type="button">подробнее о проекте</button>
+
+            <div class="modal">
+              <div class="modal__body">
+                <h2 class="modal__header">Напишите нам</h2>
+                <p class="modal__text">Оставьте ваши контакты, <br>если у вас
+                  остались вопросы — мы&nbsp;на&nbsp;них ответим!</p>
+                <button class="modal__close" type="button">
+                  <span class="visually-hidden">Связаться с нами</span>
+                </button>
+
+                <form class="form form--modal" action="https://echo.htmlacademy.ru/" method="post" id="modal-form">
+                  <ul class="form__list form__list--modal">
+                    <li class="form__item form__item--name">
+                      <label class="form__label" for="name-modal">Имя</label>
+                      <input class="form__input form__input--name"
+                        type="text"
+                        id="name-modal"
+                        name="name"
+                        pattern="^[a-zA-Zа-яА-ЯЁё \-]+$"
+                        minlength="2"
+                        maxlength="32"
+                        required>
+                    </li>
+                    <li class="form__item form__item--phone">
+                      <label class="form__label" for="phone-modal">Телефон</label>
+                      <input class="form__input form__input--phone"
+                        type="tel"
+                        id="phone-modal"
+                        name="phone"
+                        pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                        required>
+                    </li>
+                    <li class="form__item form__item--select">
+                      <label class="form__label" for="city-modal">Выберите город</label>
+                      <div class="form__select-wrap select select--modal">
+                        <button class="select__button" type="button" aria-label="Сортировка"></button>
+                        <ul class="select__list">
+                          <li class="select__item"></li>
+                          <li class="select__item" data-value="saint-petersburg">Санкт-Петербург</li>
+                          <li class="select__item" data-value="moscow">Санкт-Петербург</li>
+                          <li class="select__item" data-value="kazan">Санкт-Петербург</li>
+                          <li class="select__item" data-value="ufa">Санкт-Петербург</li>
+                        </ul>
+                        <input class="select__input-hidden"
+                          id="city-modal"
+                          type="text"
+                          name="select__input"
+                          value="city">
+                      </div>
+                    </li>
+                    <li class="form__item checkbox checkbox--modal">
+                      <label class="checkbox__label" for="checkbox-modal">
+                        Я согласен на обработку моих персональных данных
+                      </label>
+                      <input
+                        class="checkbox__input"
+                        type="checkbox"
+                        id="checkbox-modal"
+                        name="checkbox-modal">
+                    </li>
+                  </ul>
+
+                  <button class="form__button link-btn" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+
           <ul class="about__list about-list">
             <li>
               <h3>Более 250 программ</h3>
-              <p>учебных и рабочих, разной
-                длительностью от 3 месяцев
-                до 1 года</p>
+              <p>учебных и рабочих, разной длительностью от&nbsp;3&nbsp;месяцев до 1 года</p>
             </li>
             <li>
               <h3>Более 3000 участников</h3>
-              <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+              <p>уже&nbsp;успешно&nbsp;прошли программу от&nbsp;«Стажировка» и&nbsp;остались в разных странах</p>
             </li>
             <li>
-              <h3>участники из 60 стран</h3>
-              <p>студенты со всего мира приезжают на программу
-                «Стажировки» от 3 месяцев до 1 года</p>
+              <h3>участники из&nbsp;60&nbsp;стран</h3>
+              <p>студенты&nbsp;со&nbsp;всего&nbsp;мира приезжают&nbsp;на&nbsp;программу «Стажировки» от&nbsp;3&nbsp;месяцев до&nbsp;1 года</p>
             </li>
             <li>
-              <h3>от 4 200 $
-                до 8 400 $</h3>
-              <p>грант всем участникам
-                для комфортного прохождения
-                программы</p>
+              <h3>от 4 200 $ <br>до 8 400 $</h3>
+              <p>грант всем участникам для&nbsp;комфортного прохождения программы</p>
             </li>
           </ul>
         </div>
@@ -197,168 +261,412 @@
 
       <!-- Блок Программы -->
       <section class="programs" id="programs" data-test="programs">
-        <div class="programs__container swiper">
-          <!-- <header class="programs__headline headline"> -->
-            <h2 class="programs__header title headline__title">Программы</h2>
-            <div class="programs__swiper-buttons headline__buttons swiper-buttons">
-              <button class="headline__button--prev swiper-buttons__prev" type="button">
+        <div class="programs__container">
+          <div class="programs__swiper swiper">
+            <h2 class="programs__header title">Программы</h2>
+            <div class="programs__swiper-buttons swiper-buttons">
+              <button class="swiper-buttons__prev" type="button">
                 <span class="visually-hidden">Назад</span>
               </button>
-              <button class="headline__button--next swiper-buttons__next" type="button">
+              <button class="swiper-buttons__next" type="button">
                 <span class="visually-hidden">Следующая</span>
               </button>
             </div>
-          <!-- </header> -->
 
-          <ul class="programs__list swiper-wrapper">
-            <li class="programs__item swiper-slide">
-              <picture>
-                <!-- <source media="(min-width:1440px)" width="380" height="416" type="image/webp" srcset="img/tours/tour-1-desktop.webp 1x, img/tours/tour-1-desktop@2x.webp 2x">
-                <source media="(min-width: 768px)" width="330" height="416" type="image/webp" srcset="img/tours/tour-1-tablet.webp 1x, img/tours/tour-1-tablet@2x.webp 2x">
-                <source width="290" height="416" type="image/webp" srcset="img/tours/tour-1-mobile.webp 1x, img/tours/tour-1-mobile@2x.webp 2x">
-                <source media="(min-width:1440px)" width="380" height="416" type="image/jpg" srcset="img/tours/tour-1-desktop.jpg 1x, img/tours/tour-1-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="330" height="416" type="image/jpg" srcset="img/tours/tour-1-tablet.jpg 1x, img/tours/tour-1-tablet@2x.jpg 2x">
-                <img src="img/tours/tour-1-mobile.jpg" srcset="img/tours/tour-1-mobile@2x.jpg 2x" width="290" height="416" alt="Горные хребты Эльбруса."> -->
-              </picture>
-              <div class="tours__text-wrap">
-                <h3 class="tours__title">Стажировки</h3>
-                <a>Получите незаменимый опыт
-                  работы в крупнейших мировых
-                  компаниях.</a>
-              </div>
-            </li>
-            <li class="programs__item swiper-slide">
-              <picture>
-                <!-- <source media="(min-width:1440px)" width="380" height="416" type="image/webp" srcset="img/tours/tour-1-desktop.webp 1x, img/tours/tour-1-desktop@2x.webp 2x">
-                <source media="(min-width: 768px)" width="330" height="416" type="image/webp" srcset="img/tours/tour-1-tablet.webp 1x, img/tours/tour-1-tablet@2x.webp 2x">
-                <source width="290" height="416" type="image/webp" srcset="img/tours/tour-1-mobile.webp 1x, img/tours/tour-1-mobile@2x.webp 2x">
-                <source media="(min-width:1440px)" width="380" height="416" type="image/jpg" srcset="img/tours/tour-1-desktop.jpg 1x, img/tours/tour-1-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="330" height="416" type="image/jpg" srcset="img/tours/tour-1-tablet.jpg 1x, img/tours/tour-1-tablet@2x.jpg 2x">
-                <img src="img/tours/tour-1-mobile.jpg" srcset="img/tours/tour-1-mobile@2x.jpg 2x" width="290" height="416" alt="Горные хребты Эльбруса."> -->
-              </picture>
-              <div class="tours__text-wrap">
-                <h3 class="tours__title">Волонтёрство</h3>
-                <a>Помогайте другим
-                  и развивайте свои
-                  лидерские качества</a>
-              </div>
-            </li>
-            <li class="programs__item swiper-slide">
-              <picture>
-                <!-- <source media="(min-width:1440px)" width="380" height="416" type="image/webp" srcset="img/tours/tour-1-desktop.webp 1x, img/tours/tour-1-desktop@2x.webp 2x">
-                <source media="(min-width: 768px)" width="330" height="416" type="image/webp" srcset="img/tours/tour-1-tablet.webp 1x, img/tours/tour-1-tablet@2x.webp 2x">
-                <source width="290" height="416" type="image/webp" srcset="img/tours/tour-1-mobile.webp 1x, img/tours/tour-1-mobile@2x.webp 2x">
-                <source media="(min-width:1440px)" width="380" height="416" type="image/jpg" srcset="img/tours/tour-1-desktop.jpg 1x, img/tours/tour-1-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="330" height="416" type="image/jpg" srcset="img/tours/tour-1-tablet.jpg 1x, img/tours/tour-1-tablet@2x.jpg 2x">
-                <img src="img/tours/tour-1-mobile.jpg" srcset="img/tours/tour-1-mobile@2x.jpg 2x" width="290" height="416" alt="Горные хребты Эльбруса."> -->
-              </picture>
-              <div class="tours__text-wrap">
-                <h3 class="tours__title">Учёба</h3>
-                <a>Получите образование и измените
-                  своё будущее.</a>
-              </div>
-            </li>
-          </ul>
+            <ul class="programs__list swiper-wrapper">
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-1.webp 1x, img/programs/program-desk-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-1.webp 1x, img/programs/program-tab-1@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-1.webp 1x, img/programs/program-mob-1@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-1.jpg 1x, img/programs/program-desk-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-1.jpg 1x, img/programs/program-tab-1@2x.jpg 2x">
+                  <img src="img/programs/program-mob-1.jpg" srcset="img/programs/program-mob-1@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Стажировки</h3>
+                  <div class="programs__text">
+                    <span>Получите незаменимый опыт работы в крупнейших мировых компаниях.</span>
+                    <a class="programs__link link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-2.webp 1x, img/programs/program-desk-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-2.webp 1x, img/programs/program-tab-2@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-2.webp 1x, img/programs/program-mob-2@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-2.jpg 1x, img/programs/program-desk-2@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-2.jpg 1x, img/programs/program-tab-2@2x.jpg 2x">
+                  <img src="img/programs/program-mob-2.jpg" srcset="img/programs/program-mob-2@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Волонтёрство</h3>
+                  <div class="programs__text">
+                    <span>Помогайте другим и&nbsp;развивайте свои лидерские&nbsp;качества</span>
+                    <a class="programs__link link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-3.webp 1x, img/programs/program-desk-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-3.webp 1x, img/programs/program-tab-3@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-3.webp 1x, img/programs/program-mob-3@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-3.jpg 1x, img/programs/program-desk-3@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-3.jpg 1x, img/programs/program-tab-3@2x.jpg 2x">
+                  <img src="img/programs/program-mob-3.jpg" srcset="img/programs/program-mob-3@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Учёба</h3>
+                  <div class="programs__text">
+                    <span>Получите образование и измените своё будущее.</span>
+                    <a class="programs__link link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
 
-          <a class="programs__to-all link" href="#">все программы</a>
-          <div class="programs__pagination swiper-pagination"></div>
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-1.webp 1x, img/programs/program-desk-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-1.webp 1x, img/programs/program-tab-1@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-1.webp 1x, img/programs/program-mob-1@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-1.jpg 1x, img/programs/program-desk-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-1.jpg 1x, img/programs/program-tab-1@2x.jpg 2x">
+                  <img src="img/programs/program-mob-1.jpg" srcset="img/programs/program-mob-1@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Стажировки</h3>
+                  <div class="programs__text">
+                    <span>Получите незаменимый опыт работы в крупнейших мировых компаниях.</span>
+                    <a class="programs__link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-2.webp 1x, img/programs/program-desk-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-2.webp 1x, img/programs/program-tab-2@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-2.webp 1x, img/programs/program-mob-2@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-2.jpg 1x, img/programs/program-desk-2@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-2.jpg 1x, img/programs/program-tab-2@2x.jpg 2x">
+                  <img src="img/programs/program-mob-2.jpg" srcset="img/programs/program-mob-2@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Волонтёрство</h3>
+                  <div class="programs__text">
+                    <span>Помогайте другим и развивайте свои лидерские качества</span>
+                    <a class="programs__link link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-3.webp 1x, img/programs/program-desk-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-3.webp 1x, img/programs/program-tab-3@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-3.webp 1x, img/programs/program-mob-3@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-3.jpg 1x, img/programs/program-desk-3@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-3.jpg 1x, img/programs/program-tab-3@2x.jpg 2x">
+                  <img src="img/programs/program-mob-3.jpg" srcset="img/programs/program-mob-3@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Учёба</h3>
+                  <div class="programs__text">
+                    <span>Получите образование и измените своё будущее.</span>
+                    <a class="programs__link link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-1.webp 1x, img/programs/program-desk-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-1.webp 1x, img/programs/program-tab-1@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-1.webp 1x, img/programs/program-mob-1@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-1.jpg 1x, img/programs/program-desk-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-1.jpg 1x, img/programs/program-tab-1@2x.jpg 2x">
+                  <img src="img/programs/program-mob-1.jpg" srcset="img/programs/program-mob-1@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Стажировки</h3>
+                  <div class="programs__text">
+                    <span>Получите незаменимый опыт работы в крупнейших мировых компаниях.</span>
+                    <a class="programs__link link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-2.webp 1x, img/programs/program-desk-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-2.webp 1x, img/programs/program-tab-2@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-2.webp 1x, img/programs/program-mob-2@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-2.jpg 1x, img/programs/program-desk-2@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-2.jpg 1x, img/programs/program-tab-2@2x.jpg 2x">
+                  <img src="img/programs/program-mob-2.jpg" srcset="img/programs/program-mob-2@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Волонтёрство</h3>
+                  <div class="programs__text">
+                    <span>Помогайте другим и развивайте свои лидерские качества</span>
+                    <a class="programs__link link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="programs__item swiper-slide">
+                <picture>
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/webp" srcset="img/programs/program-desk-3.webp 1x, img/programs/program-desk-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/webp" srcset="img/programs/program-tab-3.webp 1x, img/programs/program-tab-3@2x.webp 2x">
+                  <source width="290" height="400" type="image/webp" srcset="img/programs/program-mob-3.webp 1x, img/programs/program-mob-3@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="img/programs/program-desk-3.jpg 1x, img/programs/program-desk-3@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="img/programs/program-tab-3.jpg 1x, img/programs/program-tab-3@2x.jpg 2x">
+                  <img src="img/programs/program-mob-3.jpg" srcset="img/programs/program-mob-3@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+                </picture>
+                <div class="programs__text-wrap">
+                  <h3 class="programs__title">Учёба</h3>
+                  <div class="programs__text">
+                    <span>Получите образование и измените своё будущее.</span>
+                    <a class="programs__link link" href="#">
+                      <span class="visually-hidden">Узнать подробности</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <a class="programs__to-all link-btn" href="#">все программы</a>
+            <div class="programs__scrollbar swiper-scrollbar"></div>
+          </div>
         </div>
       </section>
 
       <!-- Блок Грант -->
       <section class="grant" id="grant" data-test="grant">
         <div class="grant__container">
-          <h2 class="grant__header title">Как поехать</h2>
-          <p>Свяжитесь с координатором, чтобы узнать
-            полную информацию. Вы получите
-            актуальные сведения о доступных
-            программах и городах, в которых можете
-            пройти программу.</p>
-          <b class="grant__title">Чтобы получить грант
-            на обучение, вам нужно:</b>
-          <ol class="grant__list">
-            <li>Быть в возрасте от 16 до 30 лет</li>
-            <li>Иметь оконченное среднее
-              образование</li>
-            <li>Иметь документально
-              подтверждённое отсутствие
-              судимости и пройти консульскую
-              проверку</li>
-            <li>За последние 2 года быть
-              не больше 3х месяцев подряд
-              непрерывно в одной стране</li>
-          </ol>
+          <div class="grant__text-wrap">
+            <h2 class="grant__header title title--secondary">Как поехать</h2>
+            <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных
+              программах и&nbsp;городах, в которых можете пройти программу.</p>
+          </div>
+
+          <picture>
+            <source media="(min-width:1440px)" width="498" height="363" type="image/webp" srcset="img/grant/grant-desk.webp 1x, img/grant/grant-desk@2x.webp 2x">
+            <source media="(min-width: 768px)" width="678" height="375" type="image/webp" srcset="img/grant/grant-tab.webp 1x, img/grant/grant-tab@2x.webp 2x">
+            <source width="290" height="200" type="image/webp" srcset="img/grant/grant-mob.webp 1x, img/grant/grant-mob@2x.webp 2x">
+            <source media="(min-width:1440px)" width="498" height="363" type="image/jpg" srcset="img/grant/grant-desk.jpg 1x, img/grant/grant-desk@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="678" height="375" type="image/jpg" srcset="img/grant/grant-tab.jpg 1x, img/grant/grant-tab@2x.jpg 2x">
+            <img src="img/grant/grant-mob.jpg" srcset="img/grant/grant-mob@2x.jpg 2x" width="290" height="200" alt="Студентка.">
+          </picture>
+
+          <div class="grant__list-wrap">
+            <p class="grant__title">Чтобы получить грант на&nbsp;обучение,&nbsp;вам нужно:</p>
+            <ol class="grant__list">
+              <li>Быть в возрасте от 16 до 30 лет</li>
+              <li>Иметь оконченное среднее образование</li>
+              <li>Иметь документально подтверждённое отсутствие судимости&nbsp;и&nbsp;пройти консульскую проверку</li>
+              <li>За последние 2 года быть не&nbsp;больше 3х месяцев подряд непрерывно в одной стране</li>
+            </ol>
+          </div>
         </div>
       </section>
 
       <!-- Блок Новости -->
       <section class="news" id="news" data-test="news">
-        <div class="news__container">
+        <div class="news__container swiper">
           <h2 class="news__header title">Новости и материалы</h2>
-          <ul class="news__tabs-list">
-            <li class="news__tab-title" data-tab="tab-1">общее</li>
-            <li class="news__tab-title" data-tab="tab-2">Волонтёрство</li>
-            <li class="news__tab-title" data-tab="tab-3">Стажировки</li>
-            <li class="news__tab-title" data-tab="tab-4">Карьера</li>
-            <li class="news__tab-title" data-tab="tab-5">путешествия</li>
+          <div class="news__tabs-list">
+            <button class="news__tab-title" type="button" data-tab="news-tab-1">общее</button>
+            <button class="news__tab-title" type="button" data-tab="news-tab-2">Волонтёрство</button>
+            <button class="news__tab-title" type="button" data-tab="news-tab-3">Стажировки</button>
+            <button class="news__tab-title" type="button" data-tab="news-tab-4">Карьера</button>
+            <button class="news__tab-title" type="button" data-tab="news-tab-5">путешествия</button>
+          </div>
+
+          <ul class="news__tab-content news-slider swiper-wrapper" id="news-tab-1">
+            <li class="news-slider__slide news-slider__slide--interview swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-23">23/03/2023</time>
+                <h3 class="news-slider__slide-title">Интервью с&nbsp;участницей программы стажировки</h3>
+                <div class="news-slider__slide-text">
+                  <span>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в ISOFound</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--travel swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-20">20/03/2023</time>
+                <h3 class="news-slider__slide-title">Путешествуем по&nbsp;миру</h3>
+                <div class="news-slider__slide-text">
+                  <span>Какие места посещают наши студенты весной</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--volunteer swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-17">17/03/2023</time>
+                <h3 class="news-slider__slide-title">Новая программа волонтёрства</h3>
+                <div class="news-slider__slide-text">
+                  <span>Программа помощи детям длительностью 4 месяца</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--career swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-10">10/03/2023</time>
+                <h3 class="news-slider__slide-title">Построй свою карьеру</h3>
+                <div class="news-slider__slide-text">
+                  <span>Ведущие компании готовы трудоустроить выпускников стажировки</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="news-slider__slide news-slider__slide--interview swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-23">23/03/2023</time>
+                <h3 class="news-slider__slide-title">Интервью с&nbsp;участницей программы стажировки</h3>
+                <div class="news-slider__slide-text">
+                  <span>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в ISOFound</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--travel swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-20">20/03/2023</time>
+                <h3 class="news-slider__slide-title">Путешествуем по&nbsp;миру</h3>
+                <div class="news-slider__slide-text">
+                  <span>Какие места посещают наши студенты весной</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--volunteer swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-17">17/03/2023</time>
+                <h3 class="news-slider__slide-title">Новая программа волонтёрства</h3>
+                <div class="news-slider__slide-text">
+                  <span>Программа помощи детям длительностью 4 месяца</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--career swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-10">10/03/2023</time>
+                <h3 class="news-slider__slide-title">Построй свою карьеру</h3>
+                <div class="news-slider__slide-text">
+                  <span>Ведущие компании готовы трудоустроить выпускников стажировки</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="news-slider__slide news-slider__slide--interview swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-23">23/03/2023</time>
+                <h3 class="news-slider__slide-title">Интервью с&nbsp;участницей программы стажировки</h3>
+                <div class="news-slider__slide-text">
+                  <span>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в ISOFound</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--travel swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-20">20/03/2023</time>
+                <h3 class="news-slider__slide-title">Путешествуем по&nbsp;миру</h3>
+                <div class="news-slider__slide-text">
+                  <span>Какие места посещают наши студенты весной</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--volunteer swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-17">17/03/2023</time>
+                <h3 class="news-slider__slide-title">Новая программа волонтёрства</h3>
+                <div class="news-slider__slide-text">
+                  <span>Программа помощи детям длительностью 4 месяца</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__slide news-slider__slide--career swiper-slide">
+              <div class="news-slider__slide-wrap">
+                <time class="news-slider__slide-date" datetime="2023-03-10">10/03/2023</time>
+                <h3 class="news-slider__slide-title">Построй свою карьеру</h3>
+                <div class="news-slider__slide-text">
+                  <span>Ведущие компании готовы трудоустроить выпускников стажировки</span>
+                  <a class="news-slider__slide-link link" href="#">
+                    <span class="visually-hidden">Узнать подробности</span>
+                  </a>
+                </div>
+              </div>
+            </li>
           </ul>
 
-          <ul class="news__tab-content" id="tab-1">
-            <li class="news__item">
-              <time class="news__date" datetime="2023-03-23">23/03/2023</time>
-              <h3 class="news__title">Интервью с участницей
-                программы стажировки</h3>
-              <a href="#">Саша рассказывает, как попала
-                в программу и как прошла 6-
-                месячная стажировка в ISOFound</a>
-            </li>
-            <li class="news__item">
-              <time class="news__date" datetime="2023-03-20">20/03/2023</time>
-              <h3 class="news__title">Путешествуем по миру</h3>
-              <a href="#">Какие места посещают наши
-                студенты весной</a>
-            </li>
-            <li class="news__item">
-              <time class="news__date" datetime="2023-03-17">17/03/2023</time>
-              <h3 class="news__title">Новая программа
-                волонтёрства</h3>
-              <a href="#">Программа помощи детям
-                длительностью 4 месяца</a>
-            </li>
-            <li class="news__item">
-              <time class="news__date" datetime="2023-03-10">10/03/2023</time>
-              <h3 class="news__title">Построй свою
-                карьеру</h3>
-              <a href="#">Ведущие компании
-                готовы трудоустроить
-                выпускников стажировки</a>
-            </li>
+          <ul class="news__tab-content news__tab-content--hidden" id="news-tab-2">
           </ul>
 
-          <ol class="news__pagination pagination">
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--prev" href="#">
-                <span class="visually-hidden">Назад</span>
-              </a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">4</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--next" href="#">
-                <span class="visually-hidden">Вперёд</span>
-              </a>
-            </li>
-          </ol>
+          <ul class="news__tab-content news__tab-content--hidden" id="news-tab-3">
+          </ul>
+
+          <ul class="news__tab-content news__tab-content--hidden" id="news-tab-4">
+          </ul>
+
+          <ul class="news__tab-content news__tab-content--hidden" id="news-tab-5">
+          </ul>
+
+          <div class="news__swiper-buttons swiper-buttons">
+            <button class="swiper-buttons__prev" type="button">
+              <span class="visually-hidden">Назад</span>
+            </button>
+            <div class="news__pagination swiper-pagination"></div>
+            <button class="swiper-buttons__next" type="button">
+              <span class="visually-hidden">Следующая</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -366,57 +674,53 @@
       <section class="faq" data-test="FAQ">
         <div class="faq__container">
           <h2 class="faq__header title">Вопросы и ответы</h2>
-          <ul class="faq__tab-content" id="faq-tab-1">
+          <ul class="faq__tab-content">
             <li class="faq__tab-item">
-              <button class="faq__toggle" data-tab="accordion-tab-1" type="button">
-                <h3 class="faq__tab-title">Кто организатор? Какие
-                  сроки у программы?</h3>
-                <span class="visually-hidden">Показать ответ</span>
+              <button class="faq__button" data-tab="faq-tab-1" type="button">
+                <span class="faq__tab-title">Кто организатор? Какие сроки у программы?</span>
+                <span class="faq__toggle"></span>
               </button>
-              <p id="accordion-tab-1">Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
+              <p id="faq-tab-1">Организатором программы является проект «Стажировка»
+                в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут
+                варьироваться от одного семестра до года.</p>
             </li>
             <li class="faq__tab-item">
-              <button class="faq__toggle" data-tab="accordion-tab-2" type="button">
-                <h3 class="faq__tab-title">Что такое грант
-                  на обучение?</h3>
-                <span class="visually-hidden">Показать ответ</span>
+              <button class="faq__button" data-tab="faq-tab-2" type="button">
+                <span class="faq__tab-title">Что такое грант на&nbsp;обучение?</span>
+                <span class="faq__toggle"></span>
               </button>
-              <p id="accordion-tab-2">Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов.</p>
+              <p id="faq-tab-2">Грант на обучение — это финансовая поддержка, которую предоставляет
+                организатор программы обмена студентами для оплаты учебных расходов.</p>
             </li>
             <li class="faq__tab-item">
-              <button class="faq__toggle" data-tab="accordion-tab-3" type="button">
-                <h3 class="faq__tab-title">Признаётся ли учёба
-                  в рамках проекта для
-                  дальнейшего обучения?</h3>
-                <span class="visually-hidden">Закрыть ответ</span>
+              <button class="faq__button" data-tab="faq-tab-3" type="button">
+                <span class="faq__tab-title">Как определяется стоимость программы?</span>
+                <span class="faq__toggle"></span>
               </button>
-              <p id="accordion-tab-3">Полная стоимость определяется
-                организаторами в зависимости
-                от направления. В большинстве
-                случаев грант «Стажировка»
-                не покрывает полную стоимость
-                программы, и поэтому
-                предусматривается определённая
-                доля личного участия.</p>
+              <p id="faq-tab-3">Полная стоимость определяется организаторами в зависимости от&nbsp;направления.
+                В большинстве случаев грант «Стажировка» не&nbsp;покрывает полную стоимость программы, и поэтому
+                предусматривается определённая доля личного участия.</p>
             </li>
             <li class="faq__tab-item">
-              <button class="faq__toggle" data-tab="accordion-tab-4" type="button">
-                <h3 class="faq__tab-title">Признаётся ли учёба
-                  в рамках проекта для
-                  дальнейшего обучения?</h3>
-                <span class="visually-hidden">Показать ответ</span>
+              <button class="faq__button" data-tab="faq-tab-4" type="button">
+                <span class="faq__tab-title">Признаётся ли учёба в&nbsp;рамках проекта <br>для дальнейшего обучения?</span>
+                <span class="faq__toggle"></span>
               </button>
-              <p id="accordion-tab-4">Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
+              <p id="faq-tab-4">Студенты, участвующие в проекте, могут использовать полученные знания
+                и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших
+                учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие
+                в программе обмена студентами.</p>
             </li>
             <li class="faq__tab-item">
-              <button class="faq__toggle" data-tab="accordion-tab-5" type="button">
-                <h3 class="faq__tab-title">Как выглядит полный
-                  процесс регистрации
-                  на программу
-                  «Стажировка»?</h3>
-                <span class="visually-hidden">Показать ответ</span>
+              <button class="faq__button" data-tab="faq-tab-5" type="button">
+                <span class="faq__tab-title">Как выглядит полный процесс регистрации на&nbsp;программу «Стажировка»?</span>
+                <span class="faq__toggle"></span>
               </button>
-              <p id="accordion-tab-5">Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
+              <p id="faq-tab-5">Процесс регистрации на программу обмена включает выбор университета-партнера
+                и программы обмена, общение с координатором программы, заполнение заявления и предоставление
+                необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение
+                по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать
+                позвонив в центр.</p>
             </li>
           </ul>
         </div>
@@ -425,225 +729,255 @@
       <!-- Блок Отзывы -->
       <section class="reviews" id="reviews" data-test="reviews">
         <div class="reviews__container">
-          <h2 class="reviews__header title headline__title">Отзывы</h2>
-          <div class="reviews__swiper-buttons headline__buttons swiper-buttons">
-            <button class="headline__button--prev swiper-buttons__prev" type="button">
-              <span class="visually-hidden">Назад</span>
-            </button>
-            <button class="headline__button--next swiper-buttons__next" type="button">
-              <span class="visually-hidden">Следующая</span>
-            </button>
+          <div class="reviews__swiper swiper">
+            <h2 class="reviews__header title">Отзывы</h2>
+            <div class="reviews__swiper-buttons swiper-buttons">
+              <button class="swiper-buttons__prev" type="button">
+                <span class="visually-hidden">Назад</span>
+              </button>
+              <button class="swiper-buttons__next" type="button">
+                <span class="visually-hidden">Следующая</span>
+              </button>
+            </div>
+
+            <ul class="reviews__list swiper-wrapper">
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__title-wrap">
+                  <cite class="reviews__author-name">Лола <br>Алекс</cite>
+                  <dl class="reviews__author-data">
+                    <dt>программа</dt>
+                    <dd>Masa Art Challenge</dd>
+                    <dt>Дата</dt>
+                    <dd>Осень 2022</dd>
+                  </dl>
+                </div>
+                <div class="reviews__text-wrap">
+                  <b>Я могу с уверенностью сказать, что это&nbsp;был один из самых незабываемых опытов в&nbsp;жизни!</b>
+                  <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание
+                    путешествий, общения и значимой работы действительно отличает её&nbsp;от других программ, и&nbsp;я&nbsp;чувствую
+                    огромную благодарность за&nbsp;предоставленную мне&nbsp;возможность.</p>
+                </div>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__title-wrap">
+                  <cite class="reviews__author-name">Давид <br>Иванов</cite>
+                  <dl class="reviews__author-data">
+                    <dt>программа</dt>
+                    <dd>Volunteer Chance</dd>
+                    <dt>Дата</dt>
+                    <dd>Лето 2022</dd>
+                  </dl>
+                </div>
+                <div class="reviews__text-wrap">
+                  <b>Благодаря опыту стажировки  я узнал так&nbsp;много нового о себе и об окружающем мире.</b>
+                  <p>Каждый день был возможностью оказать ощутимое влияние на&nbsp;жизнь других людей. Я бы очень рекомендовал
+                    эту&nbsp;волонтёрскую программу всем, кто ищет значимый и&nbsp;незабываемый опыт. Организация была на высшем
+                    уровне.&nbsp;<br>Для меня было честью быть частью такой удивительной инициативы.</p>
+                </div>
+              </li>
+
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__title-wrap">
+                  <cite class="reviews__author-name">Лола <br>Алекс</cite>
+                  <dl class="reviews__author-data">
+                    <dt>программа</dt>
+                    <dd>Masa Art Challenge</dd>
+                    <dt>Дата</dt>
+                    <dd>Осень 2022</dd>
+                  </dl>
+                </div>
+                <div class="reviews__text-wrap">
+                  <b>Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</b>
+                  <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание
+                    путешествий, общения и значимой работы действительно отличает её&nbsp;от других программ, и я чувствую
+                    огромную благодарность за&nbsp;предоставленную мне&nbsp;возможность.</p>
+                </div>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <div class="reviews__title-wrap">
+                  <cite class="reviews__author-name">Давид <br>Иванов</cite>
+                  <dl class="reviews__author-data">
+                    <dt>программа</dt>
+                    <dd>Volunteer Chance</dd>
+                    <dt>Дата</dt>
+                    <dd>Лето 2022</dd>
+                  </dl>
+                </div>
+                <div class="reviews__text-wrap">
+                  <b>Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</b>
+                  <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал
+                    эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне.
+                    Для меня было честью быть частью такой удивительной инициативы.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="reviews__scrollbar swiper-scrollbar"></div>
           </div>
-
-          <ul class="reviews__list swiper-wrapper">
-            <li class="reviews__item swiper-slide">
-              <blockquote class="reviews__author">
-                <cite class="reviews__author-name">Лола
-                  Алекс</cite>
-                <dl class="">
-                  <dt>программа</dt>
-                  <dd>Masa Art Challenge</dd>
-                  <dt>Дата</dt>
-                  <dd>
-                    <time datetime="2022-09-01/2022-11-30">Осень 2022</time>
-                  </dd>
-                </dl>
-                <b>Я могу с уверенностью сказать,
-                  что это был один из самых
-                  незабываемых опытов в жизни!</b>
-                <p>Я рекомендую программу
-                  «Стажировка» всем студентам,
-                  желающим получить незабываемые
-                  впечатления. Сочетание
-                  путешествий, общения и значимой
-                  работы действительно отличает
-                  её от других программ, и я чувствую
-                  огромную благодарность
-                  за предоставленную
-                  мне возможность.</p>
-              </blockquote>
-            </li>
-            <li class="reviews__item swiper-slide">
-              <blockquote class="reviews__author">
-                <cite class="reviews__author-name">Давид
-                  Иванов</cite>
-                <dl class="">
-                  <dt>программа</dt>
-                  <dd>Volunteer Chance</dd>
-                  <dt>Дата</dt>
-                  <dd>
-                    <time datetime="2022-06-01/2022-08-31">Лето 2022</time>
-                  </dd>
-                </dl>
-                <b>Благодаря опыту стажировки я узнал
-                  так много нового о себе и об окружающем
-                  мире.</b>
-                <p>Каждый день был возможностью оказать ощутимое влияние
-                  на жизнь других людей. Я бы очень рекомендовал
-                  эту волонтёрскую программу всем, кто ищет значимый
-                  и незабываемый опыт. Организация была на высшем уровне.
-                  Для меня было честью быть частью такой удивительной
-                  инициативы.</p>
-              </blockquote>
-            </li>
-          </ul>
-
-          <div class="reviews__pagination swiper-pagination"></div>
         </div>
       </section>
 
       <!-- Блок Контакты -->
       <section class="contacts" id="contacts" data-test="contacts">
         <div class="contacts__container">
-          <h2 class="contacts__header title">Контакты</h2>
+          <div class="contacts__title-wrap">
+            <h2 class="contacts__header">Контакты</h2>
 
-          <ul class="contacts__list">
-            <li class="contacts__item contacts__item--address">
-              <b class="contacts__item-title">центральный офис</b>
-              <address class="contacts__item-text">г. Новосибирск, ул. Щетинкина 68,
-                культурный центр</address>
-            </li>
-            <li class="contacts__item contacts__item--phone">
-              <b class="contacts__item-title">Телефон</b>
-              <a class="contacts__item-text" href="tel:+796387687676">+7 963 876 876 76</a>
-            </li>
-            <li class="contacts__item contacts__item--email">
-              <b class="contacts__item-title">Email</b>
-              <a class="contacts__item-text" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
-            </li>
-          </ul>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <b class="contacts__item-title">центральный офис</b>
+                <address class="contacts__item-text">г. Новосибирск, ул. Щетинкина 68,
+                  культурный центр</address>
+              </li>
+              <li class="contacts__item">
+                <b class="contacts__item-title">Телефон</b>
+                <a class="contacts__item-text" href="tel:+796387687676">+7 963 876 876 76</a>
+              </li>
+              <li class="contacts__item">
+                <b class="contacts__item-title">Email</b>
+                <a class="contacts__item-text" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+              </li>
+            </ul>
+          </div>
 
           <picture>
             <source media="(min-width:1440px)" width="1240" height="486" type="image/webp" srcset="img/map/map-desk.webp 1x, img/map/map-desk@2x.webp 2x">
             <source media="(min-width: 768px)" width="678" height="500" type="image/webp" srcset="img/map/map-tab.webp 1x, img/map/map-tab@2x.webp 2x">
             <source width="290" height="240" type="image/webp" srcset="img/map/map-mob.webp 1x, img/map/map-mob@2x.webp 2x">
-            <source media="(min-width:1440px)" width="1240" height="486" type="image/jpg" srcset="img/map/map-desk.jpg 1x, img/map/map-desk@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="678" height="500" type="image/jpg" srcset="img/map/map-tab.jpg 1x, img/map/map-tab@2x.jpg 2x">
-            <img src="img/map/map-mob.png" srcset="img/map/map-mob@2x.jpg 2x" width="290" height="240" alt="Локация компании Lifetour в г.Москва.">
+            <source media="(min-width:1440px)" width="1240" height="486" type="image/png" srcset="img/map/map-desk.png 1x, img/map/map-desk@2x.png 2x">
+            <source media="(min-width: 768px)" width="678" height="500" type="image/png" srcset="img/map/map-tab.png 1x, img/map/map-tab@2x.png 2x">
+            <img src="img/map/map-mob.png" srcset="img/map/map-mob@2x.png 2x" width="290" height="240" alt="Локация компании Lifetour в г.Москва.">
           </picture>
         </div>
       </section>
 
       <!-- Блок Форма -->
-      <section class="form" data-test="form">
-        <div class="form__container">
-          <h2 class="form__header title">Напишите нам</h2>
-          <p class="form__text">Оставьте ваши контакты, если у вас
-            остались вопросы — мы на них ответим!</p>
+      <section class="page-form" data-test="form">
+        <div class="page-form__container">
+          <div class="page-form__wrap">
+            <h2 class="page-form__header">Напишите нам</h2>
+            <p class="page-form__text">Оставьте ваши контакты, если у вас
+              остались вопросы — мы на них ответим!</p>
 
-          <form action="https://echo.htmlacademy.ru/" method="post" id="form">
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="visually-hidden" for="name">Имя</label>
-                <input class="form__input"
-                tabindex="1"
-                  type="text"
-                  id="name"
-                  name="name"
-                  required>
-              </li>
-              <li class="form__item">
-                <label class="form__label" for="phone" data-text="Телефон">Телефон</label>
-                <input class="form__input"
-                  tabindex="2"
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required>
-              </li>
-              <li class="form__item">
-                <label class="form__label" for="feedback" data-text="feedback">Ваше сообщение</label>
-                <textarea class="form__input"
-                  tabindex="3"
-                  id="feedback"
-                  name="feedback">
-                </textarea>
-              </li>
-              <li class="form__item">
-                <p class="form__label">Выберите город</p>
-                <select class="form__input form__input--select" aria-label="Сортировка" tabindex="4">
-                  <option value=""></option>
-                  <option value="saint-petersburg">Санкт-Петербург</option>
-                  <option value="moscow">Санкт-Петербург</option>
-                  <option value="kazan">Санкт-Петербург</option>
-                  <option value="ufa">Санкт-Петербург</option>
-                </select>
-              </li>
-              <li class="form__item">
-                <label class="form__label form__label--checkbox">
-                  Я согласен на обработку моих персональных данных
-                </label>
-                <input class="form__input form__input--checkbox" type="checkbox" name="" required>
-                <!-- <span class="form__input form__input--checkbox"></span> -->
-              </li>
-            </ul>
+            <form class="form" action="https://echo.htmlacademy.ru/" method="post" id="page-form">
+              <ul class="form__list">
+                <li class="form__item form__item--name">
+                  <label class="form__label" for="name">Имя</label>
+                  <input class="form__input form__input--name"
+                    type="text"
+                    id="name"
+                    name="name"
+                    pattern="^[a-zA-Zа-яА-ЯЁё \-]+$"
+                    minlength="2"
+                    maxlength="32"
+                    required>
+                </li>
+                <li class="form__item form__item--phone">
+                  <label class="form__label" for="phone">Телефон</label>
+                  <input class="form__input form__input--phone"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                    required>
+                </li>
+                <li class="form__item form__item--feedback">
+                  <label class="form__label" for="feedback">Ваше сообщение</label>
+                  <textarea class="form__input form__input--feedback"
+                    id="feedback"
+                    name="feedback">
+                  </textarea>
+                </li>
+                <li class="form__item form__item--select">
+                  <label class="form__label" for="city">Выберите город</label>
+                  <div class="form__select-wrap select">
+                    <button class="select__button" type="button" aria-label="Сортировка"></button>
+                    <ul class="select__list">
+                      <li class="select__item"></li>
+                      <li class="select__item" data-value="saint-petersburg">Санкт-Петербург</li>
+                      <li class="select__item" data-value="moscow">Санкт-Петербург</li>
+                      <li class="select__item" data-value="kazan">Санкт-Петербург</li>
+                      <li class="select__item" data-value="ufa">Санкт-Петербург</li>
+                    </ul>
+                    <input
+                      class="select__input-hidden"
+                      id="city"
+                      type="text"
+                      name="select__input"
+                      value="city">
+                  </div>
+                </li>
+                <li class="form__item checkbox">
+                  <label class="checkbox__label" for="checkbox">
+                    Я согласен на обработку моих персональных <br>данных
+                  </label>
+                  <input
+                    class="checkbox__input"
+                    type="checkbox"
+                    id="checkbox"
+                    name="checkbox"
+                    required>
+                </li>
+              </ul>
 
-            <button class="form__button link link--button" type="submit" tabindex="6">Отправить</button>
-          </form>
+              <button class="form__button link-btn link-btn--secondary" type="submit">Отправить</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="main-footer" data-test="footer">
-      <div class="main-footer__container footer">
-        <img class="footer__logo logo" src="img/logo.svg" width="52" height="52" alt="Логотип проекта Стажировка.">
+      <div class="main-footer__container">
+        <img class="main-footer__logo" src="img/logo.svg" width="52" height="52" alt="Логотип проекта Стажировка.">
 
-        <ul class="footer__nav">
-          <li class="footer__nav-item">
+        <ul class="main-footer__nav footer-nav">
+          <li class="footer-nav__item">
             <a href="#about">О проекте</a>
           </li>
-          <li class="footer__nav-item">
+          <li class="footer-nav__item">
             <a href="#programs">Программы</a>
           </li>
-          <li class="footer__nav-item">
+          <li class="footer-nav__item">
             <a href="#grant">Как поехать</a>
           </li>
-          <li class="footer__nav-item">
+          <li class="footer-nav__item">
             <a href="#reviews">Отзывы</a>
           </li>
-          <li class="footer__nav-item">
+          <li class="footer-nav__item">
             <a href="#news">Новости</a>
           </li>
-          <li class="footer__nav-item">
+          <li class="footer-nav__item">
             <a href="#contacts">Контакты</a>
           </li>
         </ul>
 
-        <a class="footer__confidentiality" href="#">Политика конфиденциальности</a>
-        <p class="footer__law-text" href="#">Стажировка © 2023 Все права защищены</p>
+        <div class="main-footer__copyright-wrap">
+          <a class="main-footer__legal-link" href="#">Политика конфиденциальности</a>
+          <p class="main-footer__copyright">Стажировка © 2023 Все права защищены</p>
+        </div>
 
-        <ul class="footer__social social">
+        <ul class="main-footer__social social">
           <li class="social__item">
-            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-              <!-- <svg role="img" aria-label="ВКонтакте" focusable="false">
-                <use href="/__spritemap#sprite-vk"></use>
-              </svg> -->
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--ok" href="https://www.ok.com/user/htmlacademyru">
-              <!-- <svg role="img" aria-label="Одноклассники" focusable="false">
-                <use href="/__spritemap#sprite-ok"></use>
-              </svg> -->
+            <a class="social__link social__link--ok" href="https://www.ok.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">Одноклассники</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--reddit" href="https://t.me/htmlacademy">
-              <!-- <svg role="img" aria-label="Reddit" focusable="false">
-                <use href="/__spritemap#sprite-reddit"></use>
-              </svg> -->
+            <a class="social__link social__link--reddit" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">Reddit</span>
             </a>
           </li>
         </ul>
       </div>
     </footer>
 
-    <!-- пример использования спрайта -->
-    <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg> -->
-    <!-- примеры требуемых атрибутов data-test="*" -->
+    <div class="overlay"></div>
 
     <script type="module" src="js/main.js"></script>
   </body>

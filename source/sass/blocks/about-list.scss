@@ -1,0 +1,138 @@
+.about-list {
+  margin: 0;
+  list-style: none;
+
+  padding: 42px 20px 40px 0;
+  background-color: $bg-blue;
+  border-radius: 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.about-list li {
+  border: 1px solid $secondary-color;
+  border-radius: 16px;
+  padding: 16.5px 21px 15.5px 20px;
+  margin-left: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -11px;
+    width: 22px;
+    height: 22px;
+    mask-image: url("/__spritemap#sprite-star-view");
+    mask-repeat: no-repeat;
+    background-color: $white;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 42px;
+    height: 42px;
+    background-color: $bg-blue;
+  }
+}
+
+.about-list h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.about-list p {
+  padding: 0;
+  margin: 0;
+
+  color: $secondary-color;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .about-list {
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .about-list li {
+    margin-top: 22px;
+    padding: 16px 20px 15px;
+
+    &::before {
+      top: -13px;
+      left: -11px;
+    }
+
+    &::after {
+      top: -21px;
+      left: -21px;
+    }
+  }
+
+  .about-list h3 {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+
+    margin-bottom: 14px;
+  }
+
+  .about-list p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-list {
+    padding: 50px 100px;
+    gap: 29px 32px;
+  }
+
+  .about-list li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    &:first-child {
+      padding: 51px 41px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      padding: 31px 41px;
+    }
+
+    &:last-child {
+      padding: 41px;
+    }
+  }
+
+  .about-list h3 {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.26px;
+
+    margin-bottom: 0;
+  }
+
+  .about-list p {
+    width: 201px;
+  }
+}

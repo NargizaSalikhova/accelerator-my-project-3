@@ -1,0 +1,23 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src;
+  }
+}
+
+// @mixin button($bg-color: $blue-bc, $text-color: $white, $width: 100%) { //можно так?
+//   font-size: 16px;
+//   font-weight: 500;
+//   line-height: 16px;
+//   text-align: center;
+
+//   background-color: $bg-color;
+//   color: $text-color;
+//   padding: 20px;
+//   border: 1px solid transparent;
+//   width: $width;
+//   display: block;
+// }

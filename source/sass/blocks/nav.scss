@@ -1,0 +1,109 @@
+.nav__button {
+  width: 136px;
+  height: 54px;
+
+  // text-align: left;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 4px 5px 4px 21px;
+  border-radius: 30px;
+  border: 1px solid $bg-blue;
+  background-color: $white;
+
+  cursor: pointer;
+}
+
+.nav__button.active {
+  width: 290px;
+  background-color: $bg-blue;
+  padding: 4px 4px 4px 20px;
+  margin-bottom: 4px;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.nav__button.active .nav__button-name {
+  color: $white;
+}
+
+.nav__button-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: $bg-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+
+  margin-right: 20px;
+}
+
+// .nav__toggle-wrap {
+//   width: 46px;
+//   height: 46px;
+//   background-color: $bg-blue;
+//   border-radius: 50%;
+//   padding: 12px 0;
+// }
+
+// .nav__toggle-wrap svg {
+//   width: 22px;
+//   height: 22px;
+//   stroke: $white;
+// }
+
+.nav__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  width: 46px;
+  height: 46px;
+  background-color: $bg-blue;
+  border-radius: 50%;
+
+  // padding: 12px 0;
+}
+
+.nav__button.active::after {
+  background-color: $white;
+}
+
+.nav__toggle {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 97px;
+  width: 18px;
+  height: 18px;
+  mask-image: url("/__spritemap#sprite-menu-view");
+  mask-repeat: no-repeat;
+  background-color: $white;
+}
+
+.nav__button.active .nav__toggle {
+  left: 87.5%;
+  mask-image: url("/__spritemap#sprite-cross-view");
+  background-color: $bg-blue;
+}
+
+.nav__list {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .nav__button {
+    height: 56px;
+    padding: 5px 5px 5px 21px;
+  }
+
+  .nav__button.active {
+    width: 286px;
+  }
+}

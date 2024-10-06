@@ -1,0 +1,35 @@
+.footer-nav {
+  list-style: none;
+  padding: 0 2.55px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  justify-content: center;
+}
+
+.footer-nav__item a {
+  text-align: center;
+  color: $primary-color;
+  text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .footer-nav {
+    padding: 0;
+
+    gap: 15.7px;
+    justify-content: end;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer-nav {
+    justify-content: left;
+    gap: 30px;
+  }
+
+  .footer-nav__item {
+    padding: 0 0.22 0 0.21px;
+  }
+}

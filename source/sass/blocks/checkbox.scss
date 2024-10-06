@@ -1,0 +1,167 @@
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  align-items: center;
+}
+
+.checkbox__label {
+  font-size: 12px;
+  line-height: 14px;
+  color: $secondary-color;
+  opacity: 0.8;
+
+  padding: 0;
+  margin: 0;
+  order: 2;
+  cursor: pointer;
+}
+
+.checkbox__input {
+  order: 1;
+  width: 20px;
+  height: 20px;
+  padding: 6px 4px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: $white;
+  display: block;
+  position: relative;
+
+  cursor: pointer;
+
+  outline: none;
+  appearance: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mask-image: url("/__spritemap#sprite-check-view");
+    mask-repeat: no-repeat;
+    mask-size: 10px 10px;
+    mask-position: center;
+    background-color: $bg-blue;
+    opacity: 0;
+    transition: 0.1s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $white;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    background-color: $white-opacity-60;
+    border-color: $white;
+  }
+
+  &--error {
+    background-color: $red-opacity-20;
+    border-color: $red;
+  }
+}
+
+.checkbox__input:checked {
+  &::after {
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $white;
+    background-color: transparent;
+
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &:disabled {
+    background-color: $grey;
+    border-color: $grey;
+
+    &::after {
+      background-color: $white;
+    }
+  }
+}
+
+.checkbox--modal.form__item {
+  gap: 10px;
+}
+
+.checkbox--modal .checkbox__label {
+  color: $primary-color;
+  opacity: 0.9;
+}
+
+.checkbox--modal .checkbox__input {
+  background-color: $bg-blue;
+  border-color: $bg-blue;
+  flex-shrink: 0;
+
+  &::after {
+    background-color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $bg-blue;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    background-color: $bg-blue-opacity;
+    border-color: $white;
+  }
+
+  &--error {
+    background-color: $red-opacity-20;
+    border-color: $red;
+  }
+}
+
+.checkbox--modal .checkbox__input:checked {
+  &::after {
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: transparent;
+    background-color: $bg-blue;
+
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &:disabled {
+    background-color: $grey;
+    border-color: $grey;
+
+    &::after {
+      background-color: $white;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .checkbox {
+    gap: 10px;
+  }
+
+  .checkbox__label {
+    line-height: 12px;
+    opacity: 0.9;
+
+    br {
+      display: none;
+    }
+  }
+}

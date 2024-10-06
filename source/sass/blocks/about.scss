@@ -1,0 +1,148 @@
+.about {
+  background-color: $secondary-color;
+}
+
+.about__container {
+  padding: 50px 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__header.title {
+  margin-left: 1px;
+  margin-bottom: 15px;
+}
+
+.about__title p {
+  padding: 0;
+  margin: 0;
+
+  // margin-bottom: 40px;
+
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.about__info-text h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $bg-blue;
+}
+
+.about__info-text p {
+  padding: 0;
+  margin: 0;
+}
+
+.about__button {
+  margin-right: 67px;
+}
+
+.about__info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .about__container {
+    padding: 50px 45px;
+    display: block;
+  }
+
+  .about__header.title {
+    margin-left: 0;
+    margin-bottom: 30.5px;
+  }
+
+  .about__title {
+    margin-bottom: 40px;
+  }
+
+  .about__title p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .about__info-text h3 {
+    margin-bottom: 29.5px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .about__info-text {
+    width: 498px;
+  }
+
+  .about__button {
+    margin-right: 399px;
+  }
+
+  .about__info {
+    margin-bottom: 60px;
+    gap: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 60px 100px;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px 40px;
+  }
+
+  .about__title {
+    padding: 10px 0;
+    grid-column: 1/2;
+    margin-bottom: 0;
+  }
+
+  .about__header.title {
+    margin-bottom: 30px;
+  }
+
+  .about__title p {
+    font-size: 22px;
+    line-height: 32px;
+
+    // margin-bottom: 0;
+  }
+
+  .about__info {
+    margin-bottom: 0;
+    grid-column: 2/-1;
+  }
+
+  .about__info-text {
+    padding: 10px 0;
+  }
+
+  .about__info-text h3 {
+    margin-bottom: 40px;
+
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .about__button {
+    margin-right: 219px;
+    margin-bottom: 0;
+  }
+
+  .about__list {
+    grid-column: 1/-1;
+  }
+}
+
